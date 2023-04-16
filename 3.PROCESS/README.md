@@ -1,3 +1,5 @@
+
+```
 # Load packages in R
 library(readr)
 library(tidyverse)
@@ -10,3 +12,4 @@ library(janitor)
 setwd("C:\\Users\\khale\\Documents\\GDA_capstone_1_cyclistic")
 csv_files <- list.files(pattern = "*.csv")
 cyc_data <- do.call(rbind, lapply(csv_files, read.csv))
+```
