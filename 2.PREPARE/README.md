@@ -15,8 +15,7 @@ Original - The data is made available by Motivate International Inc. which opera
 
 Comprehensive - the data includes all information about ride details including starting time, ending time, station name, station ID, type of membership and many more.
 
-Current – It is up-to-date as it includes data until end of May 2021
-
+Current – It is up-to-date as it includes data until 2023.
 Cited - The data is cited and is available under Data License Agreement.
 
 
