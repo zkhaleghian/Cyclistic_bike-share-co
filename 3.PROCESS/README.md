@@ -1,3 +1,6 @@
+I use R and have added the ride_length and day_of_week columns to your dataset. 
+The ride_length column is calculated by subtracting the started_at from the ended_at column and formatting the result into hours, minutes, and seconds. 
+The day_of_week column is derived from the started_at column using the wday() function from the lubridate package to get the day of the week in label format.
 
 ```
 # Load packages in R
