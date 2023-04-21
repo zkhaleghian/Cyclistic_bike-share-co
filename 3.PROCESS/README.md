@@ -20,16 +20,23 @@ write.csv(cyc_data, file = "cyc_data.csv", row.names = FALSE)
 cyc_data$started_at <- as.POSIXct(cyc_data$started_at, format = "%Y-%m-%d %H:%M:%S")
 cyc_data$ended_at <- as.POSIXct(cyc_data$ended_at, format = "%Y-%m-%d %H:%M:%S")
 
-# calculate ride_len as ended_at - started_at
+# calculate ride_length as ended_at - started_at
 cyc_data <- mutate(cyc_data, ride_length = ended_at - started_at)
-cyc_data <- mutate(cyc_data, ride_length = format(ended_at - started_at, format = "%H:%M:%S"))
-
+# format ride_length to HH:MM:SS
+cyc_data$ride_length <- sprintf("%02d:%02d:%02d", as.numeric(cyc_data$ride_length) %/% 3600,
+                                (as.numeric(cyc_data$ride_length) %/% 60) %% 60,
+                                as.numeric(cyc_data$ride_length) %% 60)
 
 # calculate day of week from started_at
 cyc_data$day_of_week <- wday(cyc_data$started_at, label = TRUE)
 
 # Print the first few rows of the data
 head(cyc_data)
+
+
+
+
+
 
 
 ```
